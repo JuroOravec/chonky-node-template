@@ -18,7 +18,11 @@
     "commitizen": {
       "path": "cz-conventional-changelog"
     },
-    "packageTemplate": "1.0.0"
+    "chonky": {
+      "node": {
+        "version": "1.0.0"
+      }
+    }
   },
   "snyk": true,
   "husky": {

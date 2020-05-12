@@ -56,7 +56,7 @@
     }
   },
   "scripts": {
-    "build": "./node_modules/typescript/bin/tsc",
+    "build": "echo \"skipping command './node_modules/typescript/bin/tsc'\"",
     "watch": "./node_modules/typescript/bin/tsc --watch",
     "test": "echo \"skipping command 'npm run test:cov'\"",
     "test:cov": "run-s test:jest codecov:upload",
