@@ -181,7 +181,7 @@ Steps to create a new project using this template.
    ```bash
    mkdir temp && cd temp
    git clone https://github.com/JuroOravec/chonky-node-template.git
-   mv chonky-node-template/template/* ../
+   mv {chonky-node-template/*,chonky-node-template/.*} ../
    rm -rf chonky-node-template
    cd ..
    ```
