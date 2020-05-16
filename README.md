@@ -203,15 +203,9 @@ Steps to create a new project using this template.
    sh scripts/set_git_aliases.sh
    ```
 
-6. `Package.json`
+6. `package.json`
 
-   1. Rename `package_template.json` to `package.json`:
-
-      ```bash
-      mv ./package_template.json ./package.json
-      ```
-
-   2. Fill in:
+   1. Fill in:
 
       1. Set `name`
       1. Set `description`
@@ -240,14 +234,9 @@ Steps to create a new project using this template.
 
 9. `LICENSE`
 
-   1. Rename `LICENSE_template` to `LICENSE`
+   1. Set year
 
-      ```bash
-      mv ./LICENSE_template ./LICENSE
-      ```
-
-   2. Set year
-   3. Set author name
+   2. Set author name
 
 10. Create issue labels on GitHub
 
@@ -274,30 +263,18 @@ Steps to create a new project using this template.
 
     3. Save the token to secrets management service (e.g. LastPass).
 
-12. Zappr (config)
+12. Zappr (`.zappr.yml` config)
 
-    1. Rename `zappr_template.yml` to `zappr.yml`.
+    1. Set your username as maintainer in `zappr.yml`.
 
-       ```bash
-       mv ./.zappr_template.yaml ./.zappr.yaml
-       ```
-
-    2. Set your username as maintainer in `zappr.yml`.
-
-    3. Go to [Zappr](https://zappr.opensource.zalan.do/) and activate zappr for
+    2. Go to [Zappr](https://zappr.opensource.zalan.do/) and activate zappr for
        this project.
 
-13. AllContributors (`.all-contributorsrc_template` config)
+13. AllContributors (`.all-contributorsrc` config)
 
-    1. Rename `.all-contributorsrc_template` to `.all-contributorsrc`
+    1. Set project name (`projectName`)
 
-       ```bash
-       mv ./.all-contributorsrc_template ./.all-contributorsrc
-       ```
-
-    2. Set project name (`projectName`)
-
-    3. Set project owner (`authorGithubUsername`)
+    2. Set project owner (`authorGithubUsername`)
 
 14. Snyk
 
@@ -310,38 +287,38 @@ Steps to create a new project using this template.
        npx snyk wizard
        ```
 
+       > If prompted whether to update the policy file or replace it, choose
+       > replace.
+
        > Snyk commands are already in `package.json`, so when asked if they
        > should be added, say no.
 
-    2. Run Snyk protect to ensure the packages have been recorded.
+       > If you're prompted to authenticate, run and follow command:
+       >
+       > ```bash
+       > npx snyk auth
+       > ```
 
-       ```bash
-       npx snyk protect
-       ```
+    `snyk wizard` both patches and tests the dependencies. If later you need to
+    do either of them, then:
 
-    3. Run Snyk test to ensure the packages have been tested.
+    - Run `snyk:protect` to patch / update dependencies
 
-       ```bash
-       npx snyk test
-       ```
+      ```sh
+      npm run snyk:protect
+      ```
 
-    > If you're prompted to authenticate, run and follow command:
-    >
-    > ```bash
-    > npx snyk auth
-    > ```
+    - Run `snyk:test` to test vulnerabilities
+
+      ```sh
+      npm run snyk:protect
+      ```
 
 15. Travis (config)
 
-    1. Rename `.travis_template.yml` to `.travis.yml`.
+    1. Set project name (`projectName`).
 
-       ```bash
-       mv ./.travis_template.yml ./.travis.yml
-       ```
-
-    2. Set project name (`projectName`).
-
-    3. Set project owner (`authorGithubUsername`).
+    2. Set project owner (`authorGithubUsername`).
 
 16. Travis (bot)
 
@@ -615,54 +592,29 @@ Steps to create a new project using this template.
 
     Fill in missing info in docs.
 
-    1. `PULL_REQUEST_TEMPLATE_template`
+    1. `PULL_REQUEST_TEMPLATE`
 
        1. Set project name (`projectName`)
        2. Set project owner (`authorGithubUsername`)
-       3. Rename to `PULL_REQUEST_TEMPLATE`
 
-          ```bash
-          mv ./docs/PULL_REQUEST_TEMPLATE_template ./docs/PULL_REQUEST_TEMPLATE
-          ```
-
-    2. `issue_labels_template.md`
+    2. `issue_labels.md`
 
        1. Set project name (`projectName`)
        2. Set project owner (`authorGithubUsername`)
-       3. Rename to `issue_labels.md`
 
-          ```bash
-          mv ./docs/issue_labels_template.md ./docs/issue_labels.md
-          ```
-
-    3. `developing_template.md`
+    3. `developing.md`
 
        1. Set project name (`projectName`)
        2. Set project owner (`authorGithubUsername`)
-       3. Rename to `developing.md`
 
-          ```bash
-          mv ./docs/developing_template.md ./docs/developing.md
-          ```
-
-    4. `CONTRIBUTING_template.md`
+    4. `CONTRIBUTING.md`
 
        1. Set project name (`projectName`)
        2. Set project owner (`authorGithubUsername`)
-       3. Rename to `CONTRIBUTING.md`
 
-          ```bash
-          mv ./docs/CONTRIBUTING_template.md ./docs/CONTRIBUTING.md
-          ```
-
-    5. `CODE_OF_CONDUCT_template.md`
+    5. `CODE_OF_CONDUCT.md`
 
        1. Set project team email (or your email, `authorEmail`)
-       2. Rename to `CODE_OF_CONDUCT.md`
-
-          ```bash
-          mv ./docs/CODE_OF_CONDUCT_template.md ./docs/CODE_OF_CONDUCT.md
-          ```
 
     6. `logging.md`
        1. Select only those parts of logging strategy that apply.

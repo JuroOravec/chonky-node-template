@@ -41,7 +41,7 @@ async function syncLabels() {
       type: 'input',
       name: 'labelsPath',
       message: 'Labels file (relative to project root)',
-      default: 'labels.json',
+      default: 'labels.yml',
     },
     {
       type: 'confirm',
