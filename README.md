@@ -310,26 +310,32 @@ Steps to create a new project using this template.
        npx snyk wizard
        ```
 
+       > If prompted whether to update the policy file or replace it, choose
+       > replace.
+
        > Snyk commands are already in `package.json`, so when asked if they
        > should be added, say no.
 
-    2. Run Snyk protect to ensure the packages have been recorded.
+       > If you're prompted to authenticate, run and follow command:
+       >
+       > ```bash
+       > npx snyk auth
+       > ```
 
-       ```bash
-       npx snyk protect
-       ```
+    `snyk wizard` both patches and tests the dependencies. If later you need to
+    do either of them, then:
 
-    3. Run Snyk test to ensure the packages have been tested.
+    - Run `snyk:protect` to patch / update dependencies
 
-       ```bash
-       npx snyk test
-       ```
+      ```sh
+      npm run snyk:protect
+      ```
 
-    > If you're prompted to authenticate, run and follow command:
-    >
-    > ```bash
-    > npx snyk auth
-    > ```
+    - Run `snyk:test` to test vulnerabilities
+
+      ```sh
+      npm run snyk:protect
+      ```
 
 15. Travis (config)
 
