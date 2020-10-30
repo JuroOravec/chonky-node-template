@@ -98,7 +98,7 @@
     "dotenv-cli": "^3.1.0",
     "env-ci": "^5.0.2",
     "eslint": "^6.8.0",
-    "git-authors-cli": "^1.0.24",
+    "git-authors-cli": "^1.0.31",
     "github-label-sync": "^1.6.0",
     "husky": "^4.2.5",
     "inquirer": "^7.1.0",
