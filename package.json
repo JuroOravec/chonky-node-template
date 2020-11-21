@@ -1,6 +1,6 @@
 {
   "name": "chonky-node-template",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Featureful template for a GitHub-based TypeScript-written Node package",
   "homepage": "https://github.com/JuroOravec/chonky-node-template#readme",
   "repository": "github:JuroOravec/chonky-node-template",
